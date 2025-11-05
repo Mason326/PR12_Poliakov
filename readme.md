@@ -35,3 +35,4 @@ System.out.println("status code: " + resp.statusCode() + " HTTP protocol version
 |ALT_SVC|Использует только Alt-Svc (RFC 7838) для нахождения H3-ендпойнта. Пока Alt-Svc не получен, общается по H2/H1.|Первый запрос почти всегда H2/H1; после получения alt-svc: h3=... последующие - по H3.|Если Alt-Svc не приходит, останется на H2/H1; даунгрейд допустим.|
 |HTTP_3_URI_ONLY|Пробует только прямой H3 на origin (host:port из URI). Alt-Svc не используется|Немедленная попытка QUIC к origin.|Нет даунгрейда: если H3 недоступен - запрос падает с ошибкой.|
 
+Статья взята с Хабра для образовательных целей. [Ссылка на статью](https://habr.com/ru/companies/spring_aio/articles/959850/)
